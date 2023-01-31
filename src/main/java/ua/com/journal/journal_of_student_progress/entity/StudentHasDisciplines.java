@@ -1,5 +1,6 @@
 package ua.com.journal.journal_of_student_progress.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -8,8 +9,16 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
+@Entity
+@Table(name = "student_has_disciplines")
 public class StudentHasDisciplines {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Students students;
-    private Disciplines disciplines;
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student students;
+    @ManyToOne
+    @JoinColumn(name = "disciplines_id")
+    private Discipline discipline;
 }

@@ -3,6 +3,8 @@ package ua.com.journal.journal_of_student_progress.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -10,15 +12,17 @@ import lombok.*;
 @ToString
 
 @Entity
-@Table(name = "courses_has_disciplines")
-public class CoursesHasDisciplines {
+@Table(name = "grupi")
+public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long number;
+    private Long numberOfStudents;
+    @OneToMany(mappedBy = "group")
+    private List<Student> studentList;
     @ManyToOne
     @JoinColumn(name = "courses_id")
-    private Course courseCHD;
-    @ManyToOne
-    @JoinColumn(name = "disciplines_id")
-    private Discipline disciplines;
+    private Course courses;
+
 }
