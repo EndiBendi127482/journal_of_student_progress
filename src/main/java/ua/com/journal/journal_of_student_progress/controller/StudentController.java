@@ -19,9 +19,9 @@ public class StudentController {
     }
 
     @GetMapping("/student")
-    public String getPageStudent(/*Model model*/){
-        //List<Student> studentList = studentService.getAllStudent();
-        //model.addAttribute("allStudent", studentList);
+    public String getPageStudent(Model model){
+        List<Student> studentList = studentService.getAllStudent();
+        model.addAttribute("allStudent", studentList);
 
         return "student";
     }
