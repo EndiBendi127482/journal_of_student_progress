@@ -1,7 +1,7 @@
 <#import "group/grouppage.ftl" as p>
 <@p.pages>
 
-<h2>Course</h2>
+<h2>Group</h2>
 
 <nav aria-label="...">
     <ul class="pagination">

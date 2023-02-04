@@ -1,7 +1,7 @@
 <#import "truancy/truancypage.ftl" as p>
 <@p.pages>
 
-<h2>Course</h2>
+<h2>Truancy</h2>
 
 <nav aria-label="...">
     <ul class="pagination">

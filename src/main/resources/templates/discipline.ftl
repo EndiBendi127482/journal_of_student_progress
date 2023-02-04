@@ -1,7 +1,7 @@
 <#import "discipline/disciplinepage.ftl" as p>
 <@p.pages>
 
-<h2>Course</h2>
+<h2>Discipline</h2>
 
 <nav aria-label="...">
     <ul class="pagination">
